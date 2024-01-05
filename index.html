@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../css/custom.css">
 <link rel="alternate" href="index.xml" type="application/rss+xml" title="Music AIGC">
 <!-- <link rel="shortcut icon" href="favicon.png" type="image/x-icon" /> -->
-<title>Melody-Diffuseq generation samples</title>
+<title>POP-Diffuseq music generation samples</title>
 </head>
 <body>
 
@@ -27,13 +27,15 @@
 
 	<main role="main">
 		<article itemscope itemtype="https://schema.org/BlogPosting">
-            <h1 class="entry-title" itemprop="headline">Melody-Diffuseq generation samples</h1>
+            <h1 class="entry-title" itemprop="headline">Pop-Diffuseq generation samples and supplement</h1>
 			
 			<section itemprop="entry-text">
 				
 
 <!-- <h3 id="audio:5235174b1b444bed79f65b35b58276f2">Ha ha</h3> -->
-<h3>1. Piano and chord conditioned melody generation (accompaniment to melody)</h3>
+<h2>1. Piano and chord conditioned melody generation (accompaniment to melody)</h2>
+<p>Generate melody based on a given piano accompaniment. </p>
+<h3>Data set: Pop909. </h3>
 
 <table><thead>
 <tr>
@@ -87,71 +89,87 @@
 </tbody>
 </table>
 
-<h3>2. Chord conditioned accompaniment generation (lead sheet to accompaniment)</h3>
+<h2>2. Prompts and chord conditioned accompaniment generation (prompts and melody to accompaniment)</h2>
+<p>Generate band accompaniment from specified instruments and tempo prompts. </p>
+<h3>Data set: MidiPopBand3k &nbsp; Masking strategy: high quality</h3>
+
 <table><thead>
   <tr>
-  <th style="text-align: center">Samples</th>
-  <th style="text-align: center">AI Generation</th>
-  </tr></thead><tbody>
+  <th style="text-align: center">Samples    </th>
+  <th style="text-align: center">Input prompts    </th>
+  <th style="text-align: center">Input melody</th>
+  <th style="text-align: center">AI generation</th>
+  </tr></thead>
+    <tbody>
   <tr>
-  <td>Band accompaniment generation sample 1</td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/band-accom-gen-1.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td style="text-align: center">Sample 1 &nbsp;</td>
+  <td style="text-align: center">Guitar, bass, ensemble, drum, percussive, Tempo-Andante &nbsp;</td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/80-popband-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/80-popband-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
   </tr>
   <tr>
-  <td>Band accompaniment generation sample 2</td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/band-accom-gen-2.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td style="text-align: center">Sample 2 &nbsp;</td>
+  <td style="text-align: center">Ethnic, bass, guitar, drum, synth-pad, Tempo-Andante &nbsp;</td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/334-popband-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/334-popband-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
   </tr>
   <tr>
-  <td>Band accompaniment generation sample 3</td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/band-accom-gen-3.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  </tr>
+      <td style="text-align: center">Sample 3 &nbsp;</td>
+      <td style="text-align: center">Brass, bass, synth-pad, drum, ensemble, Tempo-Moderato &nbsp;</td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/353-popband-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/353-popband-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+ </tr>
   <tr>
-  <td>Piano accompaniment generation sample</td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/piano-accom-gen-1.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  </tr>
+      <td style="text-align: center">Sample 4 &nbsp;</td>
+      <td style="text-align: center">Strings, bass, guitar, piano, Tempo-Andante &nbsp;</td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/18-popband-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/18-popband-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+ </tr>
   <tr>
-  <td>Prelude generation Sample</td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/prelude-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+      <td style="text-align: center">Sample 5 &nbsp;</td>
+      <td style="text-align: center">Guitar, bass, piano, drum, organ, Tempo-Allegro &nbsp;</td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/126-popband-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/126-popband-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
   </tr>
   </tbody>
   </table>
 
-  <h3>3. Contrast experiment </h3>
-  <!-- <font size="3">sssss</font> -->
-  <h4>Since the training data and tasks are different, the experiments cannot strictly represent the performance of our model. </h4>
-  <table><thead>
+<h3>Data set: LMD &nbsp; Masking strategy: high quality </h3>
+<table><thead>
   <tr>
-  <th style="text-align: center">Samples</th>
-  <th style="text-align: center">Chord</th>
-  <th style="text-align: center">CMT</th>	
-  <th style="text-align: center">Our model</th>
-  </tr></thead><tbody>
+  <th style="text-align: center">Samples    </th>
+  <th style="text-align: center">Input prompts    </th>
+  <th style="text-align: center">Input melody</th>
+  <th style="text-align: center">AI generation</th>
+  </tr></thead>
+    <tbody>
   <tr>
-  <td>Sample 1</td>
-  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/ContrastExperiment-1-chord.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/ContrastExperiment-1-cmt.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/ContrastExperiment-1-our.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td style="text-align: center">Sample 1 &nbsp;</td>
+  <td style="text-align: center">Electric guitar, bass, drum, Tempo-Moderato &nbsp;</td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/0-lmd-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/0-lmd-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
   </tr>
   <tr>
-  <td>Sample 2</td>
-  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/ContrastExperiment-2-chord.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/ContrastExperiment-2-cmt.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/ContrastExperiment-2-our.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td style="text-align: center">Sample 2 &nbsp;</td>
+  <td style="text-align: center">Brass, bass, drum, percussive, Tempo-Andante &nbsp;</td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/6-lmd-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/6-lmd-gen-quality.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
   </tr>
   <tr>
-    <th style="text-align: center">Samples</th>
-    <th style="text-align: center">Chord</th>
-    <th style="text-align: center">MelodyDiffusion</th>	
-    <th style="text-align: center">Our model</th>
-    </tr></thead><tbody>
+      <td style="text-align: center">Sample 3 &nbsp;</td>
+      <td style="text-align: center">Acoustic guitar, bass, drum, piano, Tempo-Allegro &nbsp;</td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/16-lmd-melody-quality.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/16-lmd-gen-quality.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+ </tr>
   <tr>
-  <td>Sample 3</td>
-  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/ContrastExperiment-3-chord.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/ContrastExperiment-3-melodydiffusion.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/ContrastExperiment-3-our.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  </tr>
+      <td style="text-align: center">Sample 4 &nbsp;</td>
+      <td style="text-align: center">Ensemble, synth pad, percussive, Tempo-Moderato &nbsp;</td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/17-lmd-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/17-lmd-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+ </tr>
   </tbody>
   </table>
+
 
 			</section>
 		</article>
