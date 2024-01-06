@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" xmlns:audio="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.16-DEV" />
@@ -18,23 +18,25 @@
 <div class="container">
 
 	<header role="banner">
-		
-			
-		
-		
-	</header>
 
+	</header>
 
 	<main role="main">
 		<article itemscope itemtype="https://schema.org/BlogPosting">
             <h1 class="entry-title" itemprop="headline">Pop-Diffuseq generation samples and supplement</h1>
 			
 			<section itemprop="entry-text">
-				
+
+<p style="font-size:20px;"> Digital music content generation in Midi format. The audio samples in this page are exported from Apple Logic build-in sounds.
+    <br> All of our unfiltered AI generated raw midi samples are available on Github:
+    <br> https://github.com/nahidacake/pop-diffuseq
+</p>
+
+<img src="‎text_to_score.png" alt="text to score" width="40%" height="40%">
 
 <!-- <h3 id="audio:5235174b1b444bed79f65b35b58276f2">Ha ha</h3> -->
-<h2>1. Piano and chord conditioned melody generation (accompaniment to melody)</h2>
-<p>Generate melody based on a given piano accompaniment. </p>
+<h2>1. Piano and chord conditioned melody generation samples (accompaniment to melody)</h2>
+<p style="font-size:20px;">Generate melody based on a given piano track. </p>
 <h3>Data set: Pop909. </h3>
 
 <table><thead>
@@ -89,10 +91,12 @@
 </tbody>
 </table>
 
-<h2>2. Prompts and chord conditioned accompaniment generation (prompts and melody to accompaniment)</h2>
-<p>Generate band accompaniment from specified instruments and tempo prompts. </p>
-<h3>Data set: MidiPopBand3k &nbsp; Masking strategy: high quality</h3>
+<h2>2. Prompts and chord conditioned accompaniment generation samples (prompts and melody to accompaniment)</h2>
+                <p style="font-size:20px;"> Generate band accompaniment from specified instruments and tempo prompts.
 
+<!--                    <br> All our hundreds of AI-generation midis without filtrate could be available from web.-->
+                </p>
+<h3>Data set: MidiPopBand3k &nbsp; Masking strategy: high quality</h3>
 <table><thead>
   <tr>
   <th style="text-align: center">Samples    </th>
@@ -170,13 +174,26 @@
   </tbody>
   </table>
 
-
+<h3>Contrast experiment &nbsp; Data set: LMD &nbsp; Masking strategy: high quality </h3>
+<table><thead>
+  <tr>
+  <th style="text-align: center">Samples    </th>
+  <th style="text-align: center">Input melody</th>
+  <th style="text-align: center">POPMAG</th>
+  <th style="text-align: center">Our Pop-Diffuseq</th>
+  </tr></thead>
+    <tbody>
+  <tr>
+  <td style="text-align: center">Sample 1 &nbsp;</td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/1-contrast-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/1-popmag.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/1-contrast-pop-diffuseq-lmd.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  </tr>
+  </tbody>
+  </table>
 			</section>
 		</article>
 	</main>
-
-
-	
 
 </div>
 
