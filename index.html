@@ -23,8 +23,7 @@
 
 	<main role="main">
 		<article itemscope itemtype="https://schema.org/BlogPosting">
-            <h1 class="entry-title" itemprop="headline">Pop-Diffuseq generation samples and supplement</h1>
-			
+            <h1 class="entry-title" itemprop="headline">Pop-Diffuseq paper supplement and generated samples</h1>
 			<section itemprop="entry-text">
 
 <p style="font-size:20px;"> Digital music content generation in Midi format. The audio samples on this page are exported from Apple Logic build-in sounds.
@@ -35,7 +34,121 @@
 <img src="‎text_to_score.png" alt="text to score" width="40%" height="40%">
 
 <!-- <h3 id="audio:5235174b1b444bed79f65b35b58276f2">Ha ha</h3> -->
-<h2>1. Piano and chord conditioned melody generation samples (accompaniment to melody)</h2>
+<h2>1. Supplement of music representation design</h2>
+<h3> Instrument </h3>
+<p style="font-size:20px;"> We adopt all 16 instrument categories according to the MIDI protocol, then divide the guitar into acoustic guitar and electric guitar, and finally the vocal melody track, a total of 18 categories.
+    <br>All existing musical instruments and sounds are classified into these 18 categories: </p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Instrument Category &nbsp; &nbsp;</th>
+<th style="text-align: center">Timbre Cases (program number) &nbsp; &nbsp;</th>
+<th style="text-align: center">Instrument Category &nbsp; &nbsp;</th>
+<th style="text-align: center">Timbre Cases (program number) &nbsp; &nbsp; &nbsp;</th>
+</tr></thead>
+    <tbody>
+<tr>
+<td>Melody</td>
+<td>grand piano(0)</td>
+<td>Chord progression</td>
+<td>grand piano(0)</td>
+</tr>
+<tr>
+<td>Piano</td>
+<td>grand piano(0), Honky-tonk piano(3)</td>
+<td>Chromatic percussion</td>
+<td>marimba(12), xylophone(13)</td>
+</tr>
+<tr>
+<td>Organ</td>
+<td>accordion(21), church organ(19)</td>
+<td>Bass</td>
+<td>acoustic bass(32), electric bass(33)</td>
+</tr>
+<tr>
+<td>Acoustic guitar</td>
+<td>nylon(24), steel(25)</td>
+<td>Electric guitar</td>
+<td>jazz(26), overdriven(29)</td>
+</tr>
+<tr>
+<td>Strings</td>
+<td>violin(40), string ensemble(48)</td>
+<td>Ensemble</td>
+<td>synth strings(51), string ensemble(48)</td>
+</tr>
+<tr>
+<td>Brass</td>
+<td>Trumpet(56), brass section(61)</td>
+<td>Reed</td>
+<td>bassoon(70), clarinet(71)</td>
+</tr>
+<tr>
+<td>Pipe</td>
+<td>flute(73), piccolo(72)</td>
+<td>lead</td>
+<td>square(80)</td>
+</tr>
+<tr>
+<td>pad</td>
+<td>choir(91)</td>
+<td>Effects</td>
+<td>echoes (102)</td>
+</tr>
+<tr>
+<td>Ethnic</td>
+<td>sitar(104), shamisen(106)</td>
+<td>Percussion</td>
+<td>synth drum(118), taiko(116)</td>
+</tr><tr>
+<td>Drum</td>
+<td>drum kit(0, is_drum=True)</td>
+<td>Unknow</td>
+<td>grand piano(0)</td>
+</tr>
+</tbody>
+</table>
+
+<h3> Tempo </h3>
+<p style="font-size:20px;">Simply put, tempo determines how quickly the score is played, it is a significant global mark on score.
+    <br>The detailed explanation can be found at https://en.wikipedia.org/wiki/Tempo
+    <br>Tempo affects the distribution of note onset times and durations, thus having a powerful influence on the emotion and mood.
+</p>
+<table><thead>
+  <tr>
+  <th style="text-align: center">Tempo Category &nbsp; &nbsp;</th>
+  <th style="text-align: center">BPM Range</th>
+  </tr></thead>
+    <tbody>
+  <tr>
+      <td style="text-align: center">largo</td>
+      <td style="text-align: center"><66</td>
+  </tr>
+  <tr>
+      <td style="text-align: center">andante</td>
+      <td style="text-align: center">66-108</td>
+  </tr>
+  <tr>
+      <td style="text-align: center">moderato</td>
+      <td style="text-align: center">108-126</td>
+ </tr>
+  <tr>
+      <td style="text-align: center">allegro</td>
+      <td style="text-align: center">126-168</td>
+ </tr>
+  <tr>
+      <td style="text-align: center">presto</td>
+      <td style="text-align: center">>168</td>
+  </tr>
+  </tbody>
+  </table>
+
+<h3> Chord </h3>
+<p style="font-size:20px;"> In Pop-Diffuseq, Chord progression is the timeline of entire musical scores. Chords include 12 root notes and 9 types:
+    <br>Major triad, Minor triad, Augmented triad, Diminished triad, Dominant seventh, Major seventh, Minor seventh, Half-diminished seventh.
+</p>
+
+<h2>2. Piano and chord conditioned melody generation samples (accompaniment to melody)</h2>
 <p style="font-size:20px;">Generate melody based on a given piano track. </p>
 <h3>Data set: Pop909. </h3>
 
@@ -91,7 +204,7 @@
 </tbody>
 </table>
 
-<h2>2. Prompts and chord conditioned accompaniment generation samples (prompts and melody to accompaniment)</h2>
+<h2>3. Prompts and chord conditioned accompaniment generation samples (prompts and melody to accompaniment)</h2>
                 <p style="font-size:20px;"> Generate band accompaniment from specified instruments and tempo prompts.
 
 <!--                    <br> All our hundreds of AI-generation midis without filtrate could be available from web.-->
